@@ -6,7 +6,7 @@
 /*   By: junhhong <junhhong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 15:52:35 by junhhong          #+#    #+#             */
-/*   Updated: 2024/12/24 15:38:18 by junhhong         ###   ########.fr       */
+/*   Updated: 2024/12/24 16:41:02 by junhhong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,8 +121,7 @@ int	set_mlx(t_info *info)
 		free(info->mlx);
 		return (1);
 	}
-	info->window_img = (t_img *)malloc(sizeof(t_img));
-	info->window_img->img = mlx_new_image(info->mlx, window_width, window_height);
-	info->window_img->data = (int *)mlx_get_data_addr(info->window_img->img, &info->window_img->bpp, &info->window_img->size_line, &info->window_img->endian);
+	if (window_img_make(info))
+		return (1);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: junhhong <junhhong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 14:53:11 by junhhong          #+#    #+#             */
-/*   Updated: 2024/12/24 15:39:14 by junhhong         ###   ########.fr       */
+/*   Updated: 2024/12/24 17:02:29 by junhhong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,11 @@ void	free_all(t_info *info)
 		doubleintarr_free(info->texture, num_texture);
 	if (info->window_screen != NULL)
 		doubleintarr_free(info->window_screen, window_height);
+	if (info->window_img != NULL && info->window_img->img != NULL)
+	{
+		mlx_destroy_image(info->mlx, info->window_img->img);
+		info->window_img->img = NULL;
+	}
 	if (info->window_img)
 		free(info->window_img);
-	mlx_destroy_image(info->mlx, info->window_img->img);
 }

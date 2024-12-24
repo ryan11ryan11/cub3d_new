@@ -6,7 +6,7 @@
 /*   By: junhhong <junhhong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 15:15:01 by junhhong          #+#    #+#             */
-/*   Updated: 2024/12/24 15:37:39 by junhhong         ###   ########.fr       */
+/*   Updated: 2024/12/24 16:29:48 by junhhong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,6 +104,7 @@ int		set_texture(t_info *info);
 int		texture_init(t_info *info);
 /*set_info5*/
 int		set_window_screen(t_info *info);
+int		window_img_make(t_info *info);
 
 /*set_map*/
 int		set_map(t_info *info);
