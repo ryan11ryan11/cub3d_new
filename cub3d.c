@@ -6,7 +6,7 @@
 /*   By: junhhong <junhhong@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 15:13:06 by junhhong          #+#    #+#             */
-/*   Updated: 2024/12/24 16:15:45 by junhhong         ###   ########.fr       */
+/*   Updated: 2024/12/30 11:30:07 by junhhong         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,11 +58,8 @@ int	main(int argc, char *argv[])
 	print_status(&info);
 	mlx_hook(info.win, X_CLICK, 0, &finish_program, &info);
 	mlx_hook(info.win, KEY_PRESS, 1L<<0, &key_press, &info);
-	printf("#1\n");
 	mlx_loop_hook(info.mlx, &game, &info);
-	printf("#2\n");
 	mlx_loop(info.mlx);
-	printf("#3\n");
 	free_all(&info);
 	return (0);
 }

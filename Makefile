@@ -6,14 +6,14 @@
 #    By: junhhong <junhhong@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/25 11:16:19 by junhhong          #+#    #+#              #
-#    Updated: 2024/12/24 17:01:45 by junhhong         ###   ########.fr        #
+#    Updated: 2024/12/30 11:32:31 by junhhong         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -g #-fsanitize=address
 LIBDIR = libft
-LIBFT = libft/libft.a -L minilibx-linux -lmlx_Linux -lX11 -lXext
+LIBFT = libft/libft.a -L minilibx-linux -lmlx_Linux -lX11 -lXext -lm
 NAME = cub3d
 AR = ar -rcs
 

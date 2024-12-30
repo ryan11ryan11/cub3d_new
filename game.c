@@ -90,7 +90,6 @@ int		game_1(t_info *info)
 		int drawEnd = lineHeight / 2 + window_height / 2;
 		if(drawEnd >= window_height)
 			drawEnd = window_height - 1;
-
 		int	color;
 		if (info->map[mapY][mapX] == '1')
 			color = 0xFF0000;
@@ -113,6 +112,5 @@ int		game_1(t_info *info)
 int	game(t_info *info)
 {
 	game_1(info);
-	mlx_put_image_to_window(info->mlx, info->win, &info->img, 0, 0);
 	return (0);
 }
