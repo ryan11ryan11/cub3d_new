@@ -17,7 +17,7 @@ LIBFT = libft/libft.a -L minilibx-linux -lmlx_Linux -lX11 -lXext
 NAME = cub3d
 AR = ar -rcs
 
-SRC = cub3d ./get_next_line/get_next_line utils tester set_info_1 set_info_2 set_info_3 set_info_4 set_info_5 cubfile_check set_map validity_check_1 validity_check_block
+SRC = cub3d ./get_next_line/get_next_line utils tester set_info_1 set_info_2 set_info_3 set_info_4 set_info_5 move_1 game cubfile_check set_map validity_check_1 validity_check_block
 
 all : $(NAME)
 

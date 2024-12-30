@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <fcntl.h>
+#include <math.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <unistd.h>
@@ -33,6 +34,8 @@
 #define	num_texture	8
 #define window_height		600
 #define window_width		600
+#define moveSpeed	0.03
+#define rotSpeed	0.1
 
 typedef struct s_img
 {
@@ -132,6 +135,16 @@ void	set_doubleintarr_null(int **arr, int height, int width);
 void	doubleintarr_free(int **double_arr, int num);
 void	doublearr_free(char **double_arr);
 void	free_all(t_info *info);
+
+/* move */
+void	press_w(t_info *info);
+void	press_s(t_info *info);
+void	press_a(t_info *info);
+void	press_d(t_info *info);
+
+/* game */
+int		game(t_info *info);
+
 
 /* to be deleted befor submit */
 void print_status(t_info *info);

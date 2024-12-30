@@ -28,7 +28,7 @@ int	extension_check(const char *path)
 int	is_news(char *line)
 {
 	int	i;
-	const char *compare = "10NEWS \n";
+	const char *compare = "01234NEWS \n";
 
 	i = 0;
 	while (line[i])
@@ -74,9 +74,11 @@ int	news_check(t_info *info)
 	}
 	if (info->number_news != 1)
 	{
-		ft_putendl_fd("N,E,W,S component is more than 1\n", 2);
+		ft_putendl_fd("N,E,W,S component is not 1\n", 2);
 		return (1);
 	}
+	else // here set NEWS to 0
+		info->map[(int)info->pos_y][(int)info->pos_x] = '0';
 	return (0);
 }
 

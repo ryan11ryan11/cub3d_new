@@ -66,8 +66,6 @@ void	free_all(t_info *info)
 	close(info->fd);
 	if (info->win)
 		mlx_destroy_window(info->mlx, info->win);
-	if (info->mlx)
-		free(info->mlx);
 	if (info->whole_file != NULL)
 		doublearr_free(info->whole_file);
 	if (info->NO != NULL)
@@ -97,4 +95,6 @@ void	free_all(t_info *info)
 	}
 	if (info->window_img)
 		free(info->window_img);
+	if (info->mlx)
+		free(info->mlx);
 }

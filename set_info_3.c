@@ -26,7 +26,7 @@ int	set_pos(t_info *info)
 		{
 			if (ft_strchr(compare, info->map[i][j]))
 			{
-				info->pos_y = info->num_map_lines - i - 1;
+				info->pos_y = i;
 				info->pos_x = j;
 				info->direction[0] = info->map[i][j];
 				return (0);

@@ -25,13 +25,13 @@ int	key_press(int key, t_info *info)
 {
 	(void) info;
 	if (key == KEY_W)
-		printf("W pressed\n");
+		press_w(info);
 	if (key == KEY_S)
-		printf("S pressed\n");
+		press_s(info);
 	if (key == KEY_A)
-		printf("A pressed\n");
+		press_a(info);
 	if (key == KEY_D)
-		printf("S pressed\n");
+		press_d(info);
 	if (key == KEY_LEFT)
 		printf("LEFT pressed\n");
 	if (key == KEY_RIGHT)
@@ -58,7 +58,11 @@ int	main(int argc, char *argv[])
 	print_status(&info);
 	mlx_hook(info.win, X_CLICK, 0, &finish_program, &info);
 	mlx_hook(info.win, KEY_PRESS, 1L<<0, &key_press, &info);
+	printf("#1\n");
+	mlx_loop_hook(info.mlx, &game, &info);
+	printf("#2\n");
 	mlx_loop(info.mlx);
+	printf("#3\n");
 	free_all(&info);
 	return (0);
 }
